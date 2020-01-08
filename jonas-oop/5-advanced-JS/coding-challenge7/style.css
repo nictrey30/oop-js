@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #b27844;
+  color: #ffd7b4;
+}
+.container {
+  padding-top: 10rem;
+  position: absolute;
+  height: 90vh;
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  transform: translate(-50%, -50%);
+  /* background: #dca778; */
+  background: url('bg.jpeg') center center no-repeat/cover;
+  color: #5f2f05;
+}
+.container::after {
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 1.5rem 0.5rem;
+  /* background: #5f2f05; */
+  color: #ffd7b4;
+  border-radius: 5px;
+  max-width: 300px;
+  margin: auto;
+}
+h2::first-letter,
+h2 span {
+  color: #dc7d78;
+  font-size: 4rem;
+}
+#question {
+  padding: 1rem;
+}
+#question p {
+  font-size: 1.3rem;
+  background: #ffd7b4;
+  color: #5f2f05;
+  padding: 1rem;
+  border-radius: 5px;
+  max-width: 800px;
+  margin: auto;
+}
+#answers {
+  padding: 1rem;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: auto;
+}
+#answers p {
+  max-width: 50%;
+  border-radius: 5px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+#answers p:nth-child(odd) {
+  background: #ffd7b4;
+  color: #5f2f05;
+}
+#answers p:nth-child(even) {
+  background: #5f2f05;
+  color: #ffd7b4;
+  transform: translateX(100%);
+}
+#answers p:hover {
+  background: #dc7d78;
+}
+.scores {
+  text-align: center;
+  font-size: 2rem;
+  margin: auto;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  background: #3f1a0b;
+  color: #ffd7b4;
+  padding: 0.8rem 2rem;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+.scores span {
+  font-size: 3rem;
+}
+.trackQuestion {
+  text-align: right;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  background: #3f1a0b;
+  color: #ffd7b4;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+}
+.disabled,
+.disabled:hover {
+  background: #333;
+  color: #3f1a0b;
+}
+.btn {
+  font-size: 1rem;
+  padding: 1rem;
+  background: #ffd7b4;
+  color: #5f2f05;
+  border: none;
+  border-radius: 5px;
+  width: 70px;
+  text-align: center;
+}
+.btn:hover {
+  color: #ffd7b4;
+  background: #dc7d78;
+}
+.btn-prev {
+  position: absolute;
+  bottom: 28%;
+  left: 10%;
+}
+.btn-next {
+  position: absolute;
+  right: 10%;
+  bottom: 28%;
+}
