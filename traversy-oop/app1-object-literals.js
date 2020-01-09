@@ -8,3 +8,5 @@ const book1 = {
 };
 
 console.log(book1.summary);
+// console.log(Object.keys(book1));
+// console.log(Object.values(book1));

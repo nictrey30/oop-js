@@ -9,7 +9,7 @@ function Circle(radius) {
 
   this.draw = function() {
     computeoptimumLocation(0.1);
-    console.log(draw);
+    console.log('draw');
   };
   Object.defineProperty(this, 'defaultLocation', {
     get: function() {
