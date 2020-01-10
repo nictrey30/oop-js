@@ -20,4 +20,4 @@ const book1 = Object.create(bookProtos, {
   year: { value: 2015 }
 });
 
-console.log(book1);
+console.log(book1.getAge()); // '5 years passed since Book One was published'
