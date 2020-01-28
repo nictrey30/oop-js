@@ -4,14 +4,17 @@
 let sym = Symbol('name');
 console.log(sym == Symbol('name')); // false
 
-// Being both unique and usable as property names makes symbols suitable for defining interfaces that can peacefully live alongside other properties, no matter what their names are.
+// Being both unique and usable as property names makes symbols suitable for defining interfaces
+// that can peacefully live alongside other properties, no matter what their names are.
 const toStringSymbol = Symbol('toString');
 Array.prototype[toStringSymbol] = function() {
   return `${this.length} cm of blue yarn.`;
 };
 console.log([1, 2].toString()); // 1, 2
 console.log([1, 2][toStringSymbol]()); // 2 cm of blue yarn
-// It is possible to include symbol properties in object expressions and classes by using square brackets around the property name. That causes the property name to be evaluated, much like the square bracket property access notation, which allows us to refer to a binding that holds the symbol.
+// It is possible to include symbol properties in object expressions and classes 
+// by using square brackets around the property name. That causes the property name to be evaluated, 
+// much like the square bracket property access notation, which allows us to refer to a binding that holds the symbol.
 let stringObject = {
   [toStringSymbol]() {
     return 'a jute rope';
